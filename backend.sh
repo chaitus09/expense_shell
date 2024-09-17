@@ -1,5 +1,5 @@
 mysql_root_password=$1
-if [ -z "$mysql_root_password" ]; then
+if [ -z "${mysql_root_password}" ]; then
   echo "input password is missing"
   exit 1
 fi
@@ -22,5 +22,5 @@ systemctl daemon-reload
 systemctl enable backend
 systemctl start backend
 dnf install mysql -y
-mysql -h 172.31.80.163 -uroot -p$mysql_root_password < /app/schema/backend.sql
+mysql -h 172.31.80.163 -uroot -p${mysql_root_password} < /app/schema/backend.sql
 #ExpenseApp@1mysql_root_password
