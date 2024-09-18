@@ -1,7 +1,8 @@
 source common.sh
 
-print_Task_Heading " nodejs installation"
-dnf install nginx -
+print_Task_Heading " nginx installation"
+dnf install nginx -y
+
 systemctl enable nginx
 systemctl start nginx
 
