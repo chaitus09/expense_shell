@@ -7,7 +7,15 @@ fi
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 dnf install nodejs -y
+
+id expense
+if [ $? -ne 0 ]; then
 useradd expense
+else
+  echo "user is already there"
+  exit 2
+fi
+
 cp backend.service  /etc/systemd/system/backend.service
 rm -rf /app
 mkdir /app
