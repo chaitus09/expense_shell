@@ -19,4 +19,4 @@ systemctl start mysqld
 
 mysql_secure_installation --set-root-pass ${mysql_root_password}
 #ExpenseApp@1
-mysql -u root -p${mysql_root_password}
+#mysql -u root -p${mysql_root_password}
